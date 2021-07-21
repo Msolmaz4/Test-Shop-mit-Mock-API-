@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+:root {
+  --white: white;
+  --black: black;
+  --main: red;
+  --lightBlack: #2c2c2c;
+
+}
+body {
+
+  font-family: 'Open Sans',sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+width: 1000px;
+margin: 0 auto;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.nav{
+width: 100%;
+height: 70px;
+box-shadow: 0 5px  20px 2px rgba(0,0,0,0.1);
+position:fixed;
+top: 0;
+background: var(--white) ;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+.nav_container{
+  width: 100%;
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 70px;
+  justify-content: space-between;
+}
+.nav_left img {
+width: 60px;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  background: url('./images/son.jpg');
+  width: 100%;
+  height: 100vh;
+
+}
+a {
+  text-decoration: none;
+}
+.cart-icon {
+  color: var (--main);
+  font-size: 30px;
+}
+.basket {
+  position: relative;
+}
+.basket span {
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  position: absolute;
+  right: -15px;
+ top:-10px;
+ width: 25px;
+ background: var(--lightBlack) ;
+ border-radius: 50%;
+ color:var(--white);
+ font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row {
+
+  display: flex;
+  width: 100%;
+  flex-wrap:wrap;
+}
+.col-3 {
+  width: 25%;
+}
+.col-6 {
+width: 50%;
+
+}
+.product {
+padding: 25px;
+width: 100%;
+overflow:hidden;
+
+}
+.product_img{
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+.product_img img {  
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s linear;
+  
+}
+.product_img img:hover{
+  transform : scale(1,4);
+}
+
+.product_name {
+  margin:10px 0;
+  text-transform: capitalize;
+  color: #707077;
+}
+.product_discount_price {
+  text-align: right;
+}
+.product_price span {
+  color: silver;
+  font-weight: 400;
+  font-size: 13px;
 }
