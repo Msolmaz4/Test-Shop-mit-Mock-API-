@@ -40,7 +40,8 @@ const Details = () => {
                      <span className='dec'onClick={decQuantity}><BsDash/></span>
                      <span className='quantity'>{quantity}</span>
                      <span className='inc'onClick={()=> setQuantity(quantity+1)}><BsPlus /></span>
-                     <button className='btn-default'>add to cart</button>
+                     <button className='btn-default'onclick={()=> dispatch({type:'ADD_TO_CART',
+                     payload:{product,quantity}})}>add to cart</button>
                      </div>
                  </div>
                  <div className='details_p'>
