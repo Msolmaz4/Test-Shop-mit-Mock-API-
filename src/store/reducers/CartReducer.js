@@ -13,9 +13,9 @@ const CartReducer =(state=initState,action)=> {
             return state ;
           }
           else {
-            const Tprice =state.totalPrice.discountPrice*quantity;
+            const Tprice =state.totalPrice + product.discountPrice*quantity;
             const Tquantities =state.totalQuantities+quantity;
-            product.quantity=quantity
+            product.quantity=quantity;
             return {
               ...state,products:[...state.products,product],totalPrice:Tprice,
               totalQuantities:Tquantities
