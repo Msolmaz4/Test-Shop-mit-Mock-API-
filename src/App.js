@@ -14,7 +14,7 @@ function App() {
       <Provider store={store}>
        <Nav />
        <Route path='/' exact component={Home}/>
-        <Router path='/cart' exact component={Cart}/>
+        <Route path='/cart' exact component={Cart}/>
         <Route path='/details/:id' exact component={Details}/>
 
         </Provider>
